@@ -1,7 +1,7 @@
 const fs = require("fs");
 var notesData = getNotes();
 function getNotes() {
-  let data = fs.readFileSync('./db/db.json');
+  let data = fs.readFileSync('db/db.json');
   let notes = JSON.parse(data);
   for (let i = 0; i < notes.length; i++) {
       notes[i].id = '' + i;
